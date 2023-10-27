@@ -18,7 +18,12 @@
           <!-- Date Input -->
           <div class="input-group mb-2">
             <span class="input-group-text">Pickup Date</span>
-            <input class="form-control" type="date" aria-label="Date" id="pickupDate" />
+            <input
+              class="form-control"
+              type="date"
+              aria-label="Date"
+              id="pickupDate"
+              required />
           </div>
           <!-- Days -->
           <div class="input-group mb-2">
@@ -27,11 +32,12 @@
               class="form-control"
               type="number"
               aria-label="Number of days"
-              id="numOfDays" />
+              id="numOfDays"
+              required />
           </div>
           <!-- Options -->
           <p class="form-label">Options</p>
-          <div>
+          <div class="mb-2">
             <!-- Electronic Toll Tag -->
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="electronicTollTag" />
@@ -52,6 +58,36 @@
               </label>
             </div>
           </div>
+          <!-- Under 25 -->
+          <p class="form-label">Under 25</p>
+          <div class="mb-4">
+            <!-- No -->
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Under25Options"
+                id="no"
+                value="no"
+                required />
+              <label class="form-check-label" for="no">No</label>
+            </div>
+            <!-- Yes -->
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Under25Options"
+                id="yes"
+                value="yes"
+                required />
+              <label class="form-check-label" for="yes">Yes</label>
+            </div>
+          </div>
+          <!-- Estimate Total Cost -->
+          <button class="btn btn-outline-light" type="submit" id="submitBtn">
+            Estimate Total Cost
+          </button>
         </div>
       </form>
     </main>
