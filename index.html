@@ -13,7 +13,7 @@
   <body data-bs-theme="dark">
     <main class="container-md d-flex flex-column align-items-center">
       <h1 class="text-center my-3">ACME Car Rental</h1>
-      <form class="card">
+      <form class="card mb-3">
         <div class="card-body">
           <!-- Date Input -->
           <div class="input-group mb-2">
@@ -27,9 +27,9 @@
           </div>
           <!-- Days -->
           <div class="input-group mb-2">
-            <span class="input-group-text">Number of days</span>
+            <span class="input-group-text">Number of Days</span>
             <input
-              class="form-control"
+              class="form-control text-end"
               type="number"
               aria-label="Number of days"
               id="numOfDays"
@@ -88,6 +88,61 @@
           <button class="btn btn-outline-light" type="submit" id="submitBtn">
             Estimate Total Cost
           </button>
+        </div>
+        <!-- Results / Price Breakdown -->
+        <div class="card-footer text-body-secondary">
+          <!-- Car Rental Fee -->
+          <div class="input-group mb-2">
+            <span class="input-group-text">Car Rental</span>
+            <span class="input-group-text">$</span>
+            <input
+              class="form-control text-end"
+              type="number"
+              aria-label="Car Rental Total"
+              id="carRentalFee"
+              value="0.00"
+              readonly />
+          </div>
+          <!-- Options Fee -->
+          <div class="input-group mb-2">
+            <span class="input-group-text">Options</span>
+            <span class="input-group-text">$</span>
+            <input
+              class="form-control text-end"
+              type="number"
+              aria-label="Options Total"
+              id="optionsFee"
+              value="0.00"
+              readonly />
+          </div>
+          <!-- Under 25 Surcharge Fee -->
+          <div class="input-group mb-2">
+            <span class="input-group-text">Under 25 Surcharge</span>
+            <span class="input-group-text">$</span>
+            <input
+              class="form-control text-end"
+              type="number"
+              aria-label="Under 25 Surcharge Fee"
+              id="under25SurchargeFee"
+              value="0.00"
+              readonly />
+          </div>
+
+          <hr>
+
+          <!-- Total Due -->
+          <div class="input-group mb-2">
+            <span class="input-group-text">Total Due</span>
+            <span class="input-group-text">$</span>
+            <input
+              class="form-control text-center"
+              type="number"
+              aria-label="Total Due"
+              id="totalDue"
+              value="0.00"
+              readonly />
+          </div>
+
         </div>
       </form>
     </main>
