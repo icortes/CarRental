@@ -13,7 +13,7 @@
   <body data-bs-theme="dark">
     <main class="container-md d-flex flex-column align-items-center">
       <h1 class="text-center my-3">ACME Car Rental</h1>
-      <form class="card mb-3">
+      <form class="card mb-3" onsubmit="return false">
         <div class="card-body">
           <!-- Date Input -->
           <div class="input-group mb-2">
@@ -45,7 +45,7 @@
                 Electronic Toll Tag ($3.95/day)
               </label>
             </div>
-            <!-- Electronic Toll Tag -->
+            <!-- GPS -->
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="gps" />
               <label class="form-check-label" for="gps"> GPS ($2.95/day) </label>
@@ -66,9 +66,9 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="Under25Options"
+                name="under25Options"
                 id="no"
-                value="no"
+                value=false
                 required />
               <label class="form-check-label" for="no">No</label>
             </div>
@@ -77,15 +77,15 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="Under25Options"
+                name="under25Options"
                 id="yes"
-                value="yes"
+                value=true
                 required />
               <label class="form-check-label" for="yes">Yes</label>
             </div>
           </div>
-          <!-- Estimate Total Cost -->
-          <button class="btn btn-outline-light" type="submit" id="submitBtn">
+          <!-- Estimate Total Cost Button -->
+          <button class="btn btn-outline-light" type="submit" id="estimateTotalCostBtn">
             Estimate Total Cost
           </button>
         </div>
@@ -128,7 +128,7 @@
               readonly />
           </div>
 
-          <hr>
+          <hr />
 
           <!-- Total Due -->
           <div class="input-group mb-2">
@@ -142,7 +142,6 @@
               value="0.00"
               readonly />
           </div>
-
         </div>
       </form>
     </main>
